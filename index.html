@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MOUART – لوحات فنية من اختيارك</title>
+
+<style>
+/* ===== RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== COLORS ===== */
+:root{
+  --bg:#0b0b0b;
+  --gold:#d4af37;
+  --text:#eaeaea;
+  --soft:rgba(212,175,55,0.2);
+}
+
+/* ===== BODY ===== */
+body{
+  background: radial-gradient(circle at top, #151515, #000);
+  color: var(--text);
+}
+
+/* ===== HEADER ===== */
+header{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.6), #000),
+    url("https://images.unsplash.com/photo-1519681393784-d120267933ba") center/cover;
+}
+
+header h1{
+  font-family: 'Playfair Display', serif;
+  font-size:3.5rem;
+  color:var(--gold);
+  letter-spacing:3px;
+}
+
+header p{
+  max-width:600px;
+  margin:20px auto;
+  opacity:.85;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:15px 35px;
+  border:1px solid var(--gold);
+  color:var(--gold);
+  text-decoration:none;
+  letter-spacing:2px;
+  transition:.4s;
+}
+
+.btn:hover{
+  background:var(--gold);
+  color:#000;
+}
+
+/* ===== SECTION ===== */
+section{
+  padding:100px 10%;
+}
+
+/* ===== TITLES ===== */
+.section-title{
+  font-family:'Playfair Display', serif;
+  color:var(--gold);
+  font-size:2.2rem;
+  margin-bottom:50px;
+  text-align:center;
+}
+
+/* ===== GALLERY ===== */
+.gallery{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap:40px;
+}
+
+.art-card{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(212,175,55,0.15);
+  backdrop-filter: blur(8px);
+  padding:20px;
+  transition:.4s;
+}
+
+.art-card:hover{
+  transform:translateY(-10px);
+  border-color:var(--gold);
+}
+
+.art-card img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+}
+
+.art-card h3{
+  margin:15px 0 5px;
+  color:var(--gold);
+}
+
+.art-card p{
+  font-size:.9rem;
+  opacity:.8;
+}
+
+.price{
+  margin:10px 0;
+  font-weight:bold;
+}
+
+/* ===== ABOUT ===== */
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.about img{
+  width:100%;
+  border:1px solid var(--soft);
+}
+
+@media(max-width:900px){
+  .about{grid-template-columns:1fr}
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:40px;
+  font-size:.85rem;
+  opacity:.6;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== HERO ===== -->
+<header>
+  <div>
+    <h1>مرحبا بيك عند MOUART </h1>
+    <p>
+        أقدّم لوحات فنية أصلية مستوحاة من المشاعر الإنسانية، التباين بين الظل والنور، والعمق البصري.
+        كل عمل فني مرسوم بعناية ليحمل هوية خاصة ولا يتكرر.
+        اللوحات متوفرة بأحجام مختلفة ومناسبة للديكور العصري والكلاسيكي.
+        🖤 الطلب يتم مباشرة عبر WhatsApp.
+    </p>
+    <a href="#gallery" class="btn">تسوق الان</a>
+  </div>
+</header>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery">
+  <h2 class="section-title">متجر MOUART</h2>
+
+  <div class="gallery">
+
+    <div class="art-card">
+      <img src="c:\Users\dlyam\Desktop\INDEX HALAWA\MOUART\WhatsApp Image 2025-12-30 at 01.38.06.jpeg">
+      <h3>MOUART</h3>
+      <p>لوحة مستوحاة من الطلام حياة البرية ل</p>
+      <div class="price">1200 MAD</div>
+      <a class="btn" onclick="orderWhatsApp('Shadow Soul')">Commander</a>
+    </div>
+
+    <div class="art-card">
+      <img src="c:\Users\dlyam\Desktop\INDEX HALAWA\MOUART\WhatsApp Image 2025-12-30 at 01.38.07.jpeg">
+      <h3>MOUART</h3>
+      <p>لوحة مستوحاة من قلوب البارود 'الخيل</p>
+      <div class="price">1500 MAD</div>
+      <a class="btn" onclick="orderWhatsApp('Golden Silence')">Commander</a>
+    </div>
+
+    <div class="art-card">
+      <img src="c:\Users\dlyam\Desktop\INDEX HALAWA\MOUART\WhatsApp Image 2025-12-30 at 01.38.08.jpeg">
+      <h3>MOUART</h3>
+      <p>عشاق الانيم لوحة لوفي مرحبابيك</p>
+      <div class="price">1800 MAD</div>
+      <a class="btn" onclick="orderWhatsApp('Inner Fire')">Commander</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section>
+  <h2 class="section-title">À PROPOS</h2>
+
+  <div class="about">
+    <img src="c:\Users\dlyam\Desktop\INDEX HALAWA\MOUART\Gemini_Generated_Image_gi8ya6gi8ya6gi8y-removebg-preview-artguru.png">
+    <div>
+      <p>
+        Je suis un artiste visuel passionné par les contrastes,
+        l’obscurité et la lumière.  
+        Chaque œuvre est une histoire, une émotion,
+        une trace de l’âme transformée en image.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  © 2026 – Art Gallery | Orders via WhatsApp
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+function orderWhatsApp(artName){
+  const phone = "212XXXXXXXXX"; // بدل برقمك
+  const message = `Bonjour, je souhaite commander l'œuvre : ${artName}`;
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
